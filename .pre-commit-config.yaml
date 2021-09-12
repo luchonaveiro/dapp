@@ -1,5 +1,5 @@
 repos:
--   repo: local
+-   repo: local # este se usa cuando se tiene las libs instalads en el sistema
     hooks:
     -   id: black
         name: black
@@ -19,7 +19,7 @@ repos:
         language: python
         types:
           - python
--   repo: https://gitlab.com/pycqa/flake8
+-   repo: https://gitlab.com/pycqa/flake8 # sino se puede usar la lib directamente desde el repo, sin necesidad de instalarla
     rev: 3.9.2
     hooks:
     -   id: flake8
