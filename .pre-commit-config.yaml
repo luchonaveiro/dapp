@@ -3,19 +3,24 @@ repos:
     hooks:
     -   id: black
         name: black
-        entrypoint: poetry run black dapp
-        language: python
-        types:
-          - python
-    -   id: flake8
-        name: flake8
-        entrypoint: poetry run flake8 dapp
+        entry: poetry run black dapp
         language: python
         types:
           - python
     -   id: isort
         name: isort
-        entrypoint: poetry run isort dapp
+        entry: poetry run isort dapp
         language: python
         types:
           - python
+    -   id: pytest
+        name: pytest
+        entry: poetry run pytest
+        language: python
+        types:
+          - python
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    -   id: flake8
+
