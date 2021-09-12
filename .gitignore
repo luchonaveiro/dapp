@@ -1,3 +1,4 @@
 *.csv
 RESOLUCION.txt
 *__pycache__
+.pytest_cache
