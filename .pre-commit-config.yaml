@@ -1,0 +1,21 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: black
+        name: black
+        entrypoint: poetry run black dapp
+        language: python
+        types:
+          - python
+    -   id: flake8
+        name: flake8
+        entrypoint: poetry run flake8 dapp
+        language: python
+        types:
+          - python
+    -   id: isort
+        name: isort
+        entrypoint: poetry run isort dapp
+        language: python
+        types:
+          - python
